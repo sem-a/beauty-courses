@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  background-color: #FBF9F5;
+}
+.green__color {
+  color: #0B634E;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto
+}
+h1.title {
+  font-size: 36px;
+  font-weight: 600;
+}
+h2.title {
+  font-size: 36px;
+  font-weight: 600;
+}
+h3.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+h4.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+h5.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.arrow {
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  cursor: pointer;
+}
+
+/* Header */
+
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FBF9F5;
+  box-shadow: #d8d6d0 2px 0px 5px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 0;
+}
+.header-item-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.logo img {
+  height: 42px;
+}
+.messenger {
+  display: flex;
+  align-items: center;
+  margin-right: 133px;
+}
+.messenger-icon {
+  margin-right: 14px;
+  transition: all 0.5s ease 0s;
+  transform: scale(1);
+}
+.messenger-icon:hover {
+  transition: all 0.5s ease 0s;
+  transform: scale(1.05);
+}
+p.messenger-text {
+  width: 150px;
+  font-weight: 600;
+  margin-right: 21px;
+}
+.schedule-phone {
+  margin-top: 7px;
+}
+.schedule-phone a {
+  font-size: 16px;
+  font-weight: 600;
+  float: right;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease 0s;
+}
+.schedule-phone a:hover {
+  color: #0B634E;
+  transition: all 0.3s ease 0s;
+}
+
+/*---------------*/
+
+/* Form */
+
+.form {
+  background-color: white;
+  width: 420px;
+  border-radius: 20px;
+}
+.form__wrapper {
+  width: 336px;
+  margin: 0 auto;
+  padding: 49px 0;
+}
+.form__text {
+  margin-top: 14px;
+  line-height: 20px;
+}
+.form__item {
+  margin-top: 21px;
+}
+.form__privacy {
+  margin-top: 21px;
+  line-height: 20px;
+}
+input.form__input {
+  width: 336px;
+  height: 49px;
+  background-color: #DFDFDF;
+  color: black;
+  border-radius: 5px;
+  padding: 0 21px;
+}
+input.form__button {
+  width: 336px;
+  height: 49px;
+  border-radius: 5px;
+  background-color: #0B634E;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+input.form__button:hover {
+  background-color: #0A5644;
+  transition: all 0.3s ease 0s;
+}
+
+/*---------------*/
+
+/* Main */
+
+.block__main {
+  padding-top: 126px;
+  padding-bottom: 105px;
+}
+.main__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__title {
+  width: 515px;
+}
+.main__upt {
+  width: 550px;
+  margin-top: 84px;
+}
+p.upt__text {
+  font-size: 20px;
+  margin-bottom: 21px;
+  line-height: 30px;
+}
+/*---------------*/
+
+/* Theory */
+
+.block__theory {
+  padding-top: 84px;
+  padding-bottom: 105px;
+}
+.theory__subtitle {
+  margin-top: 42px;
+}
+.theory__items {
+  width: 567px;
+}
+.theory__item {
+  margin-top: 21px;
+}
+.name__theory {
+  width: 567px;
+  cursor: pointer;
+  position: relative;
+}
+.name__theory p{
+  font-size: 24px;
+  width: 509px;
+}
+.theory__arrow {
+  transform: rotate(135deg);
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+.theory__content {
+  display: none;
+  margin-left: 21px;
+}
+.theory-active {
+  display: block;
+}
+.theory__content-item {
+  margin-top: 14px;
+  width: 492px;
+  position: relative;
+}
+.theory__content-item p {
+  line-height: 20px;
+}
+.theory__content-item::before {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background-color: #0B634E;
+  position: absolute;
+  top: 10px;
+  left: -14px;
+}
+.theory__flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+.theory-and-teacher-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*---------------*/
+
+/* Teacher */
+
+.block__teacher {
+  padding-top: 84px;
+  padding-bottom: 105px;
+}
+.teacher__name {
+  margin-top: 42px;
+}
+.teacher__post {
+  margin-top: 7px;
+  width: 360px;
+}
+.teacher__post p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777777;
+}
+.teacher__info {
+  margin-top: 42px;
+  width: 486px;
+}
+.teacher__info p {
+  line-height: 25px;
+}
+
+/*---------------*/
+
+/* Practice */
+
+.block__practice {
+  padding-top: 84px;
+  padding-bottom: 105px;
+}
+.practice__item {
+  width: 574px;
+  margin: 63px auto 0 auto;
+  text-align: center;
+}
+.practice__info {
+  margin-top: 21px;
+}
+.practice__info p {
+  margin-top: 14px;
+  line-height: 20px;
+}
+
+/*----------------*/
+
+/* Students */
+
+.block__students {
+  padding-top: 84px;
+  padding-bottom: 105px;
+}
+.students__title {
+  margin: 0 auto;
+  text-align: center;
+}
+.students__carusel {
+  margin-top: 42px;
+}
+.student__flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.student__item {
+  margin-left: 21px;
+}
+.student__img img{
+  height: 210px;
+  width: 160px;
+  transform: scale(-1, 1);
+}
+.student__post {
+  margin-top: 7px;
+}
+.student__post p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #777777;
+}
+.student__feedback {
+  margin-top: 21px;
+  width: 357px;
+}
+.student__feedback p{
+  line-height: 20px;
+}
+.slider {
+  position: relative;
+  margin: 0 auto;
+  width: 650px;
+}
+.arrow-next {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transition: all 0.3s ease 0s;
+}
+.arrow-prev {
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transition: all 0.3s ease 0s;
+}
+.arrow-prev:hover, .arrow-next:hover {
+  border-top: 2px solid #0B634E;
+  border-right: 2px solid #0B634E;
+  transition: all 0.3s ease 0s;
+}
+/*----------------*/
+
+/* Contact */
+
+.block__contact {
+  padding-top: 84px;
+  padding-bottom: 105px;
+}
+.contact__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__item {
+  margin: 0 21px;
+}
+.contact__text {
+  width: 420px;
+  text-align: center;
+}
+.contact__messenger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-messenger-icon {
+  margin: 21px 7px;
+  transform: scale(1);
+  transition: all 0.3s ease 0s;
+}
+.contact-messenger-icon:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease 0s;
+}
+.contact__phone {
+  text-align: center;
+}
+p.contact__title {
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.contact__address {
+  text-align: center;
+  margin-top: 21px;
+}
+
+/*----------------*/
+
+/* Footer */
+
+.footer {
+  padding-top: 84px;
+  padding-bottom: 105px;
+}
+.footer__container {
+  position: relative;
+}
+.footer__logo img{
+  width: 126px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footer__info {
+  text-align: center;
+}
+.footer__grafic p {
+  font-size: 24px;
+  font-weight: 400;
+}
+.footer__item {
+  margin-top: 42px;
+}
+.footer__address {
+  margin-top: 21px;
+}
+.footer__number {
+  margin-top: 14px;
+}
+.footer__address p {
+  font-size: 24px;
+}
+.footer__number p {
+  font-size: 20px;
+}
+
+/*----------------*/
