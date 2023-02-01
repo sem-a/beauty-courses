@@ -1,40 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { openAccordion, scrollAnim } from '../ts/script';
+
 export default function AccordionItem() {
-
-  const [heightImage, setHeightImage] = useState<number>();
-
-  const openAccordion = () => {
-    const accordion = document.getElementsByClassName('name__theory');
-    for (let i = 0; i < accordion.length; i++) {
-      const accordionTemp = accordion[i] as HTMLElement;
-      const content = accordionTemp.nextElementSibling;
-      accordionTemp.onclick = () => {
-        content?.classList.toggle('theory-active');
-      }
-    }
-  }
-
   
-  const image = document.querySelector('.theory-and-teacher-photo') as Element;
-
-  document.addEventListener('scroll', onScroll);
   
-  function onScroll() {
-    const posTop = image.getBoundingClientRect().top;
-    
-    if(posTop + image.clientHeight <= window.innerHeight && posTop >= 0) {
-      console.log('прокрутил')
-      document.removeEventListener('scroll', onScroll);
-    }
-  }
-
-  useEffect( () => {
+  useEffect(() => {
     openAccordion();
+    scrollAnim();
   });
 
-
   return (
-    <div className="theory__items">
+    <div className="theory__items one">
       <div className="theory__item">
         <div className="name__theory">
           <p>Основы и безопасность</p>
@@ -162,7 +138,9 @@ export default function AccordionItem() {
             <p>Для чего и в каких случаях использовать: обезжириватель, дегидратор, праймер</p>
           </div>
           <div className="theory__content-item">
-            <p>Правильная подготовка ногтевой пластины к нанесению базы, акригеля, геля, полигеля</p>
+            <p>
+              Правильная подготовка ногтевой пластины к нанесению базы, акригеля, геля, полигеля
+            </p>
           </div>
         </div>
       </div>
@@ -173,7 +151,10 @@ export default function AccordionItem() {
         </div>
         <div className="theory__content">
           <div className="theory__content-item">
-            <p>Правила работы с разными материалами: Работа с разными видами баз и топов, цветным покрытием</p>
+            <p>
+              Правила работы с разными материалами: Работа с разными видами баз и топов, цветным
+              покрытием
+            </p>
           </div>
           <div className="theory__content-item">
             <p>Подбор материалов под разные ногтевые пластины</p>
@@ -210,10 +191,16 @@ export default function AccordionItem() {
             <p>Работа с трещинами, сколами, отслойками и истонченной ногтевой пластиной</p>
           </div>
           <div className="theory__content-item">
-            <p>Изучение, специфика и правила подбора материалов: полигель, акригель, акриловая пудра, стекловолокно</p>
+            <p>
+              Изучение, специфика и правила подбора материалов: полигель, акригель, акриловая пудра,
+              стекловолокно
+            </p>
           </div>
           <div className="theory__content-item">
-            <p>Способы и виды донаращивания на: верхние формы, нижние формы, стекловолокно, гелиевые типсы</p>
+            <p>
+              Способы и виды донаращивания на: верхние формы, нижние формы, стекловолокно, гелиевые
+              типсы
+            </p>
           </div>
         </div>
       </div>
@@ -233,10 +220,16 @@ export default function AccordionItem() {
             <p>Техники выравнивания</p>
           </div>
           <div className="theory__content-item">
-            <p>Особенности работы с разными ногтевыми пластинами: ровные, траплиновидные, клюющие ногти</p>
+            <p>
+              Особенности работы с разными ногтевыми пластинами: ровные, траплиновидные, клюющие
+              ногти
+            </p>
           </div>
           <div className="theory__content-item">
-            <p>Актуальные техники покрытия встык и под кутикулу. Секреты покрытия, для ускорения во время работы</p>
+            <p>
+              Актуальные техники покрытия встык и под кутикулу. Секреты покрытия, для ускорения во
+              время работы
+            </p>
           </div>
           <div className="theory__content-item">
             <p>Разбор ошибок</p>
@@ -262,7 +255,10 @@ export default function AccordionItem() {
       </div>
       <div className="theory__item">
         <div className="name__theory">
-          <p>Анализ и исправление ошибок во время отработки, предотвращение этих ошибок при дальнейшей работе</p>
+          <p>
+            Анализ и исправление ошибок во время отработки, предотвращение этих ошибок при
+            дальнейшей работе
+          </p>
         </div>
       </div>
       <div className="theory__item">
@@ -295,7 +291,9 @@ export default function AccordionItem() {
         </div>
         <div className="theory__content">
           <div className="theory__content-item">
-            <p>Как поставить руку клиента, выставить свет, найти ракурс для продающего фото и видео</p>
+            <p>
+              Как поставить руку клиента, выставить свет, найти ракурс для продающего фото и видео
+            </p>
           </div>
           <div className="theory__content-item">
             <p>Как с одного маникюра сделать 7 продающих фото и видео</p>

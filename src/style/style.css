@@ -162,10 +162,11 @@ input.form__button:hover {
   justify-content: space-between;
 }
 .main__title {
-  width: 515px;
+  width: 80%;
+  line-height: 50px;
 }
 .main__upt {
-  width: 550px;
+  width: 80%;
   margin-top: 84px;
 }
 p.upt__text {
@@ -179,7 +180,7 @@ p.upt__text {
 
 .block__theory {
   padding-top: 84px;
-  padding-bottom: 105px;
+  margin-bottom: 105px;
 }
 .theory__subtitle {
   margin-top: 42px;
@@ -204,13 +205,16 @@ p.upt__text {
   position: absolute;
   top: 2px;
   right: 0;
+  transition: all 0.5s ease 0s;
 }
 .theory__content {
   display: none;
   margin-left: 21px;
 }
 .theory-active {
-  display: block;
+  top: 10px;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease 0s;
 }
 .theory__content-item {
   margin-top: 14px;
@@ -236,8 +240,22 @@ p.upt__text {
   position: relative;
 }
 .theory-and-teacher-photo {
+  position: relative;
+}
+.theory-and-teacher-photo img {
+  width: 80%;
+  float: right;
+}
+._active {
+  position: fixed;
+  right: 10%;
+  top: auto;
+  bottom: 0;
+}
+._bottom {
   position: absolute;
-  top: 0;
+  top: auto;
+  bottom: 0;
   right: 0;
 }
 
@@ -246,8 +264,7 @@ p.upt__text {
 /* Teacher */
 
 .block__teacher {
-  padding-top: 84px;
-  padding-bottom: 105px;
+  padding-top: 189px;
 }
 .teacher__name {
   margin-top: 42px;
@@ -444,3 +461,156 @@ p.contact__title {
 }
 
 /*----------------*/
+
+
+
+/************* MOBILE *********************/
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    width: 90%;
+  }
+  .theory-and-teacher-photo img {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .footer__logo {
+    display: none;
+  }
+  .theory__content-item {
+    width: 100%;
+  }
+  .main__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__title {
+    width: 100%;
+  }
+  .main__upt {
+    width: 100%;
+    margin-top: 84px;
+  }
+  .theory__flex {
+    display: block;
+  }
+  .theory__items {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .name__theory {
+    width: 100%;
+  }
+  .name__theory p {
+    width: 80%;
+  }
+  .theory__items {
+    width: 100%
+  }
+  .messenger {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+  }
+  .schedule-header {
+    width: 250px;
+  }
+  ._bottom {
+    display: none;
+  }
+  .teacher__post {
+    width: 100%;
+  }
+  .teacher__info {
+    width: 100%;
+  }
+  .practice__item {
+    width: 100%;
+  }
+  .arrow-next, .arrow-prev {
+    display: none;
+  }
+  .student__flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .student__carusel {
+    height: 90%;
+  }
+  .student__name {
+    text-align: center;
+  }
+  .student__post {
+    text-align: center;
+  }
+  .student__feedback {
+    text-align: center;
+  }
+  .contact__flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__item {
+    margin-top: 42px;
+  }
+  .student__feedback {
+    width: 100%;
+  }
+  .slider {
+    width: 100%;
+  }
+  .contact__text {
+    width: 100%;
+  }
+  .form {
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .form__wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 28px 0;
+  }
+  .form__text {
+    margin-top: 14px;
+    line-height: 20px;
+  }
+  .form__item {
+    margin-top: 21px;
+  }
+  .form__privacy {
+    margin-top: 21px;
+    line-height: 20px;
+  }
+  input.form__input {
+    width: 100%;
+    height: 49px;
+    background-color: #DFDFDF;
+    color: black;
+    border-radius: 5px;
+    padding: 0 21px;
+  }
+  input.form__button {
+    width: 100%;
+    height: 49px;
+    border-radius: 5px;
+    background-color: #0B634E;
+    color: white;
+    transition: all 0.3s ease 0s;
+  }
+  input.form__button:hover {
+    background-color: #0A5644;
+    transition: all 0.3s ease 0s;
+  }
+}
+@media screen and (max-width: 700px) {
+  p.messenger-text {
+    display: none;
+  }
+  .schedule-header {
+    display: none;
+  }
+}

@@ -20,13 +20,12 @@ function App() {
               <div className="main__item">
                 <div className="main__title">
                   <h1 className="title">
-                    <span className="green__color">Хочу Красиво</span> открывает школу маникюра
+                    Обучение маникюру от студии красоты <span className='green__color'>Хочу Красиво</span>!
                   </h1>
                 </div>
                 <div className="main__upt">
                   <p className="upt__text">
-                    Получи <span className="green__color">востребованную</span> профессию и начни
-                    зарабатывать сразу после обучения!
+                    Передаем опыт от <span className="green__color">профессионалов</span> новичкам
                   </p>
                   <p className="upt__text">
                     Дополнительная <span className="green__color">7 дневная отработка</span> в
@@ -44,16 +43,25 @@ function App() {
         </div>
       </div>
       <div className="block__theory">
-        <div className="wrapper">
-          <div className="theory__title">
-            <h2 className="title">
-              Что Вы <span className="green__color">узнаете</span> на курсе?
-            </h2>
+        <div className='wrapper'>
+          <div className="theory__flex">
+            <div className="theory__item">
+              <div className="theory__title">
+                <h2 className="title">
+                  Что Вы <span className="green__color">узнаете</span> на курсе?
+                </h2>
+              </div>
+              <Theory />
+              <Teacher />
+            </div>
+            <div className="theory__item">
+              <div className="theory-and-teacher-photo">
+                <img src={require('./img/photo-teacher.png')} alt="" />
+              </div>
+            </div>
           </div>
-          <Theory />
         </div>
       </div>
-      <Teacher />
       <Practice />
       <Students />
       <div className="block__contact">
@@ -76,11 +84,11 @@ function App() {
                 </div>
               </div>
               <div className="contact__phone">
-                <p className='contact__title'>Позвонить</p>
+                <p className="contact__title">Позвонить</p>
                 <p>+7 (911) 028-25-46</p>
               </div>
               <div className="contact__address">
-                <p className='contact__title'>Наши адреса</p>
+                <p className="contact__title">Наши адреса</p>
                 <p>Московский просп., 73, корп. 5</p>
               </div>
             </div>

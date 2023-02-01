@@ -39,7 +39,7 @@ export default function Students() {
     <div className="block__students">
       <div className="wrapper">
         <div className="students__title">
-          <h2 className="title">Наши учиники</h2>
+          <h2 className="title">Наши ученики</h2>
         </div>
         <div className="students__carusel">
           <Slider {...settings} className="slider">
