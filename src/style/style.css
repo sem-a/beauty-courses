@@ -4,7 +4,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #000000;
-  background-color: #FBF9F5;
+  background-color: white;
 }
 .green__color {
   color: #0B634E;
@@ -49,10 +49,13 @@ h5.title {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #FBF9F5;
+  transition: all 0.5s ease 0s;
+}
+.header-color {
+  transition: all 0.5s ease 0s;
+  background-color: white;
   box-shadow: #d8d6d0 2px 0px 5px;
 }
-
 .header-flex {
   display: flex;
   align-items: center;
@@ -110,6 +113,7 @@ p.messenger-text {
   background-color: white;
   width: 420px;
   border-radius: 20px;
+  box-shadow: #d8d6d0 0px 0px 5px;
 }
 .form__wrapper {
   width: 336px;
@@ -147,11 +151,55 @@ input.form__button:hover {
   background-color: #0A5644;
   transition: all 0.3s ease 0s;
 }
+.radio {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+label.form__label {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+label.form__label::before {
+  content: '';
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 7px;
+  background-color: #0B634E;
+}
+label.form__label::after {
+  content: '';
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transform: scale(0);
+  transition: all 0.3s ease 0s;
+}
+input.form__radio {
+  display: none;
+}
+input.form__radio:checked + label.form__label::after {
+  content: '';
+  transform: scale(1);
+  transition: all 0.5s ease 0s;
+}
 
 /*---------------*/
 
 /* Main */
 
+.main {
+  background: url(../img/background.jpg) center;
+  background-size: cover;
+  height: 100vh;
+}
 .block__main {
   padding-top: 126px;
   padding-bottom: 105px;
@@ -181,6 +229,9 @@ p.upt__text {
 .block__theory {
   padding-top: 84px;
   margin-bottom: 105px;
+}
+.theory__padding {
+  padding-top: 84px;
 }
 .theory__subtitle {
   margin-top: 42px;
@@ -239,24 +290,66 @@ p.upt__text {
   justify-content: space-between;
   position: relative;
 }
-.theory-and-teacher-photo {
+.theory__items {
+  padding-top: 42px;
+}
+.accordion__btn {
+  margin-top: 63px;
+}
+p.btn__acc {
+  display: inline;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0B634E;
+  padding: 14px 28px;
+  border: 2px solid #0B634E;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+p.btn__acc:hover {
+  background-color: #0B634E;
+  color: white;
+  transition: all 0.5s ease 0s;
+}
+.theory__items {
+  display: none;
+}
+
+/*---------------*/
+
+/* InfoCourses */
+
+.block__info-courses {
+  padding: 105px 0;
+  border-top: 1px solid #0b634e89;
+  border-bottom: 1px solid #0b634e89;
+}
+.info-courses__flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.info-courses__item {
+  max-width: 300px;
+  padding: 0 14px;
+}
+.info-courses__title {
   position: relative;
 }
-.theory-and-teacher-photo img {
-  width: 80%;
-  float: right;
-}
-._active {
-  position: fixed;
-  right: 10%;
-  top: auto;
-  bottom: 0;
-}
-._bottom {
+.info-courses__title::before {
+  content: '';
   position: absolute;
-  top: auto;
-  bottom: 0;
-  right: 0;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: -20px;
+  background: url(../img/tick.png);
+  background-size: contain;
+}
+.info-courses__text {
+  margin-top: 14px;
 }
 
 /*---------------*/
@@ -264,7 +357,16 @@ p.upt__text {
 /* Teacher */
 
 .block__teacher {
-  padding-top: 189px;
+  height: 100vh;
+  padding-top: 84px;
+}
+.teacher__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.theory-and-teacher-photo img{
+  width: 100%;
 }
 .teacher__name {
   margin-top: 42px;
@@ -294,17 +396,70 @@ p.upt__text {
   padding-top: 84px;
   padding-bottom: 105px;
 }
+.practice__content {
+  margin-top: 42px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 .practice__item {
-  width: 574px;
-  margin: 63px auto 0 auto;
-  text-align: center;
+  width: 30%;
+  box-shadow: 0px 0px 10px #777777;
+  border-radius: 20px;
+  min-height: 450px;
+}
+.practice__item-wrapper {
+  padding: 42px 0;
+  width: 90%;
+  margin:  auto;
+}
+.practice__day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .practice__info {
-  margin-top: 21px;
+  margin-top: 42px;
 }
 .practice__info p {
+  position: relative;
   margin-top: 14px;
   line-height: 20px;
+  margin-left: 20px;
+}
+.practice__info p::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: -20px;
+  background: url(../img/tick.png);
+  background-size: contain;
+}
+.circle__load {
+  width: 63px;
+  height: 63px;
+  position: relative;
+}
+.c33 {
+  background: url(../img/33.png);
+  background-size: contain;
+}
+.c66 {
+  background: url(../img/66.png);
+  background-size: contain;
+}
+.c100 {
+  background: url(../img/100.png);
+  background-size: contain;
+}
+.load__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*----------------*/
@@ -314,6 +469,7 @@ p.upt__text {
 .block__students {
   padding-top: 84px;
   padding-bottom: 105px;
+  height: 100vh;
 }
 .students__title {
   margin: 0 auto;
@@ -470,11 +626,14 @@ p.contact__title {
   .wrapper {
     width: 90%;
   }
-  .theory-and-teacher-photo img {
-    width: 70%;
+  .practice__item {
+    min-height: 450px;
   }
 }
 @media screen and (max-width: 950px) {
+  .main {
+    height: auto;
+  }
   .footer__logo {
     display: none;
   }
@@ -492,6 +651,13 @@ p.contact__title {
   .main__upt {
     width: 100%;
     margin-top: 84px;
+  }
+  .info-courses__flex {
+    flex-direction: column;
+  }
+  .info-courses__item {
+    margin-top: 21px;
+    max-width: 100%;
   }
   .theory__flex {
     display: block;
@@ -517,8 +683,22 @@ p.contact__title {
   .schedule-header {
     width: 250px;
   }
-  ._bottom {
+  .block__teacher {
+    height: auto;
+  }
+  .teacher__title {
     display: none;
+  }
+  .teacher__flex {
+    flex-direction: column;
+  }
+  .theory-and-teacher-photo {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .teacher__item:nth-child(2) {
+    width: 100%;
+    order: -1;
   }
   .teacher__post {
     width: 100%;
@@ -526,11 +706,19 @@ p.contact__title {
   .teacher__info {
     width: 100%;
   }
+  .practice__content {
+    flex-direction: column;
+  }
   .practice__item {
-    width: 100%;
+    min-height: auto;
+    margin: 14px auto;
+    width: 70%;
   }
   .arrow-next, .arrow-prev {
     display: none;
+  }
+  .block__students {
+    height: auto;
   }
   .student__flex {
     flex-direction: column;
@@ -612,5 +800,10 @@ p.contact__title {
   }
   .schedule-header {
     display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .practice__item {
+    width: 100%;
   }
 }

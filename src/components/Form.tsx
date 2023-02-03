@@ -6,10 +6,10 @@ export default function Form() {
       <form action="#">
         <div className="form__wrapper">
           <div className="form__title">
-            <h4 className="title">Онлайн запись</h4>
+            <h4 className="title">Записаться на обучение или задать вопрос</h4>
           </div>
           <div className="form__text">
-            <p>Оставьте свои данные, и менеджер свяжется с вами для подтверждения заказа</p>
+            <p>Мы с вами свяжемся в ближайшее время</p>
           </div>
           <div className="form__item">
             <input type="text" id="name" placeholder="Имя" className="form__input" />
@@ -18,12 +18,33 @@ export default function Form() {
             <input type="text" id="phone" placeholder="Телефон" className="form__input" />
           </div>
           <div className="form__item">
-            <input
-              type="text"
-              id="messenger"
-              placeholder="Telegram (@hochu_krasivo)"
-              className="form__input"
-            />
+            <div className="radio">
+              <div className="radio__item">
+                <input
+                  type="radio"
+                  name="messenger"
+                  id="call"
+                  className="form__radio"
+                  value="Позвонить"
+                  checked
+                />
+                <label htmlFor="call" className="form__label">
+                  Позвонить
+                </label>
+              </div>
+              <div className="radio__item">
+                <input
+                  type="radio"
+                  name="messenger"
+                  id="write"
+                  className="form__radio"
+                  value="Написать в Whatsap"
+                />
+                <label htmlFor="write" className="form__label">
+                  Написать в WhatsApp
+                </label>
+              </div>
+            </div>
           </div>
           <div className="form__item">
             <input type="submit" id="submit" className="form__button" />

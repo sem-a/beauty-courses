@@ -8,6 +8,7 @@ import Teacher from './components/Teacher';
 import Practice from './components/Practice';
 import Students from './components/Students';
 import Footer from './components/Footer';
+import InfoCourses from './components/InfoCourses';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
               <div className="main__item">
                 <div className="main__title">
                   <h1 className="title">
-                    Обучение маникюру от студии красоты <span className='green__color'>Хочу Красиво</span>!
+                    Обучение маникюру от студии красоты{' '}
+                    <span className="green__color">Хочу Красиво</span>!
                   </h1>
                 </div>
                 <div className="main__upt">
@@ -42,21 +44,20 @@ function App() {
           </div>
         </div>
       </div>
+      <InfoCourses />
+      <Teacher />
       <div className="block__theory">
-        <div className='wrapper'>
+        <div className="wrapper">
           <div className="theory__flex">
             <div className="theory__item">
-              <div className="theory__title">
-                <h2 className="title">
-                  Что Вы <span className="green__color">узнаете</span> на курсе?
-                </h2>
-              </div>
-              <Theory />
-              <Teacher />
-            </div>
-            <div className="theory__item">
-              <div className="theory-and-teacher-photo">
-                <img src={require('./img/photo-teacher.png')} alt="" />
+
+              <div className='theory__padding'>
+                <div className="theory__title">
+                  <h2 className="title">
+                    Что Вы <span className="green__color">узнаете</span> на курсе?
+                  </h2>
+                </div>
+                <Theory />
               </div>
             </div>
           </div>
@@ -64,7 +65,8 @@ function App() {
       </div>
       <Practice />
       <Students />
-      <div className="block__contact">
+      
+      {/* <div className="block__contact">
         <div className="wrapper">
           <div className="contact__flex">
             <div className="contact__item">
@@ -97,7 +99,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

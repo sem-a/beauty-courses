@@ -12,7 +12,7 @@ export default function Header() {
           </div>
           <div className="header-item header-item-flex">
             <div className="messenger">
-              <p className="messenger-text">Свяжитесь со мной в мессенджерах:</p>
+              <p className="messenger-text">Свяжитесь с нами в мессенджерах:</p>
               <div className="messenger-icon">
                 <a href="#">
                   <img src={require('../img/whatsapp-logo.png')} alt="whatsapp" />
