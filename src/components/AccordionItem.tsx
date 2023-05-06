@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { headerColor, openAccordion, openTheory } from '../ts/script';
 
 export default function AccordionItem() {
-  
-  
   useEffect(() => {
     openAccordion();
     headerColor();
@@ -11,9 +9,12 @@ export default function AccordionItem() {
   });
 
   return (
-    <div className='accordion'>
-      <div className="accordion__btn">
-        <p className='btn__acc'>Подробнее</p>
+    <div className="accordion">
+      <div className="button__flex">
+        <div className="accordion__btn">
+          <p className="btn__acc">Подробнее</p>
+          <a href='#main' className="button">Записаться</a>
+        </div>
       </div>
       <div className="theory__items one">
         <div className="theory__item">
@@ -33,8 +34,8 @@ export default function AccordionItem() {
             </div>
             <div className="theory__content-item">
               <p>
-                Стартовый набор мастера маникюра. Перечень самого необходимого: материалы, инструменты
-                и оборудование
+                Стартовый набор мастера маникюра. Перечень самого необходимого: материалы,
+                инструменты и оборудование
               </p>
             </div>
           </div>
@@ -80,7 +81,7 @@ export default function AccordionItem() {
               <p>Как правильно и безопасно опилить форму ногтевой пластины</p>
             </div>
             <div className="theory__content-item">
-              <p>Разный формы опила: овал, квадрат, миндаль</p>
+              <p>Разная формы опила: овал, квадрат, миндаль</p>
             </div>
             <div className="theory__content-item">
               <p>Работа с разными длинами: короткие, средние и длинные ногти</p>
@@ -197,14 +198,14 @@ export default function AccordionItem() {
             </div>
             <div className="theory__content-item">
               <p>
-                Изучение, специфика и правила подбора материалов: полигель, акригель, акриловая пудра,
-                стекловолокно
+                Изучение, специфика и правила подбора материалов: полигель, акригель, акриловая
+                пудра, стекловолокно
               </p>
             </div>
             <div className="theory__content-item">
               <p>
-                Способы и виды донаращивания на: верхние формы, нижние формы, стекловолокно, гелиевые
-                типсы
+                Способы и виды донаращивания на: верхние формы, нижние формы, стекловолокно,
+                гелиевые типсы
               </p>
             </div>
           </div>
@@ -315,11 +316,13 @@ export default function AccordionItem() {
               <p>Психология работы с клиентом</p>
             </div>
             <div className="theory__content-item">
-              <p>Как писать продающие посты и какие фото выставлять для привлечения новых клиентов</p>
+              <p>
+                Как писать продающие посты и какие фото выставлять для привлечения новых клиентов
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

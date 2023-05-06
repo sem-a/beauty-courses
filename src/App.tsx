@@ -6,32 +6,28 @@ import Form from './components/Form';
 import Theory from './components/Theory';
 import Teacher from './components/Teacher';
 import Practice from './components/Practice';
-import Students from './components/Students';
 import Footer from './components/Footer';
 import InfoCourses from './components/InfoCourses';
+import WorkStudent from './components/WorkStudents';
+import Question from './components/Question';
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <div className="main">
+      <div className="main" id='main'>
         <div className="wrapper">
           <div className="block__main">
             <div className="main__flex">
               <div className="main__item">
                 <div className="main__title">
-                  <h1 className="title">
-                    Обучение маникюру от студии красоты{' '}
-                    <span className="green__color">Хочу Красиво</span>!
-                  </h1>
+                  <h1 className="title">Обучение маникюру от студии красоты Хочу Красиво!</h1>
                 </div>
                 <div className="main__upt">
+                  <p className="upt__text">Передаем опыт от профессионалов</p>
                   <p className="upt__text">
-                    Передаем опыт от <span className="green__color">профессионалов</span> новичкам
-                  </p>
-                  <p className="upt__text">
-                    Дополнительная <span className="green__color">7 дневная отработка</span> в
-                    студии под наблюдением наставников в подарок
+                    Дополнительная 7 дневная отработка в студии под наблюдением наставников в
+                    подарок
                   </p>
                 </div>
               </div>
@@ -50,12 +46,24 @@ function App() {
         <div className="wrapper">
           <div className="theory__flex">
             <div className="theory__item">
-
-              <div className='theory__padding'>
+              <div className="theory__padding">
                 <div className="theory__title">
                   <h2 className="title">
                     Что Вы <span className="green__color">узнаете</span> на курсе?
                   </h2>
+                </div>
+                <div className="theory__ecs">
+                  <p>
+                    На обучение вы получите базовые навыки, которые станут хорошим фундаментом для
+                    успешного начала работы мастером маникюра. После обучения вы сможете уверенно
+                    работать с любыми ногтями. У вас будет четкое понимает что и как делать. В вашем
+                    арсенале будут практические навыки подкреплённые теоретическим материалом.
+                  </p>
+                </div>
+                <div className="block__price">
+                  <div className="price__title">
+                    <h4 className='title'>Стоимость курса: <span className='green__color'>22 000 руб.</span></h4>
+                  </div>
                 </div>
                 <Theory />
               </div>
@@ -64,42 +72,8 @@ function App() {
         </div>
       </div>
       <Practice />
-      <Students />
-      
-      {/* <div className="block__contact">
-        <div className="wrapper">
-          <div className="contact__flex">
-            <div className="contact__item">
-              <div className="contact__text">
-                <p>Вы можете связаться с нами в любом удобном мессенджере</p>
-              </div>
-              <div className="contact__messenger">
-                <div className="contact-messenger-icon">
-                  <a href="#">
-                    <img src={require('./img/whatsapp-logo.png')} alt="whatsapp" />
-                  </a>
-                </div>
-                <div className="contact-messenger-icon">
-                  <a href="#">
-                    <img src={require('./img/telegram-logo.png')} alt="telegram" />
-                  </a>
-                </div>
-              </div>
-              <div className="contact__phone">
-                <p className="contact__title">Позвонить</p>
-                <p>+7 (911) 028-25-46</p>
-              </div>
-              <div className="contact__address">
-                <p className="contact__title">Наши адреса</p>
-                <p>Московский просп., 73, корп. 5</p>
-              </div>
-            </div>
-            <div className="contact__item">
-              <Form />
-            </div>
-          </div>
-        </div>
-      </div> */}
+      <WorkStudent />
+      <Question />
       <Footer />
     </div>
   );

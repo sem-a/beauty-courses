@@ -45,14 +45,107 @@ import { show, toggle, hide} from 'slidetoggle';
 
 export const headerColor = () => {
   const header = document.querySelector('.header');
+  const number = document.querySelector('.phone');
+  const logoDark = document.querySelector('.dark-logo') as HTMLElement;
+  const logoWhite = document.querySelector('.white-logo') as HTMLElement;
   window.addEventListener('scroll', () => {
     if(window.scrollY > 60) {
       header?.classList.add('header-color');
+      number?.classList.remove('phone')
+      number?.classList.add('dark');
+      logoWhite.style.display = 'none';
+      logoDark.style.display = 'block';
     } else {
       header?.classList.remove('header-color');
+      number?.classList.add('phone')
+      number?.classList.remove('dark');
+      logoWhite.style.display = 'block';
+      logoDark.style.display = 'none';
     }
   });
 };
+
+export const openQuestion = () => {
+  const btn = document.querySelectorAll('.question__flex');
+  for (let i = 0; i < btn.length; i++) {
+    const btnTemp = btn[i] as HTMLElement;
+    const content = btnTemp.nextElementSibling as HTMLElement;
+    btnTemp.addEventListener('click', () => {
+      toggle(content, {
+        miliseconds: 300,
+        transitionFunction: 'ease-in',
+        onAnimationStart: () => {
+          const arrow = btnTemp.children;
+          arrow[1].classList.toggle('theory-active')
+        },
+        onAnimationEnd: () => {
+        },
+        onOpen: () => {
+          const plus = btnTemp.children[1];
+          plus.classList.add('plus-active');
+        },
+        onClose: () => {
+          const plus = btnTemp.children[1];
+          plus.classList.remove('plus-active');
+        },
+        elementDisplayStyle: 'inline-block',
+      });
+    });
+  }
+}
+
+export const  phone = () => {
+  const phone = document.getElementById('phone') as HTMLInputElement;
+  phone.onclick = function () {
+    phone.value = '+';
+  };
+  let old = 0;
+
+  phone.onkeydown = function () {
+    var curLen = phone.value.length;
+
+    if (curLen < old) {
+      old--;
+      return;
+    }
+
+    if (curLen == 2) phone.value = phone.value + '(';
+
+    if (curLen == 6) phone.value = phone.value + ')-';
+
+    if (curLen == 11) phone.value = phone.value + '-';
+
+    if (curLen == 14) phone.value = phone.value + '-';
+
+    if (curLen > 16) phone.value = phone.value.substring(0, phone.value.length - 1);
+
+    old++;
+  }
+}
+
+export const openWork = () => {
+  const btn = document.querySelector('.btn__work') as HTMLElement;
+  const content = document.querySelector('.hide-content') as HTMLElement;
+  btn.addEventListener('click', () => {
+    toggle(content, {
+      miliseconds: 1000,
+      transitionFunction: 'ease-in',
+      onAnimationStart: () => {
+      },
+      onAnimationEnd: () => {
+      },
+      onOpen: () => {
+        btn.innerHTML = 'Скрыть'
+        const work = document.querySelector('.raskrit') as HTMLElement;
+        work.classList.add('_active');
+      },
+      onClose: () => {
+        btn.innerHTML = 'Показать еще'
+      },
+      elementDisplayStyle: 'inline-block',
+    });
+  });
+}
 
 export const openTheory = () => {
   const btn = document.querySelector('.btn__acc') as HTMLElement;

@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
 
-export default function InfoCourses () {
-
-  return(
+export default function InfoCourses() {
+  return (
     <div className="block__info-courses">
       <div className="wrapper">
         <div className="info-courses__flex">
@@ -11,7 +10,8 @@ export default function InfoCourses () {
               <h5 className="title">Старт</h5>
             </div>
             <div className="info-courses__text">
-              <p>18 февраля</p>
+              <p>15 апреля (осталось 2 места)</p>
+              <p>29 апреля (осталось 3 места)</p>
             </div>
           </div>
           <div className="info-courses__item">
@@ -27,12 +27,14 @@ export default function InfoCourses () {
               <h5 className="title">Продолжительность</h5>
             </div>
             <div className="info-courses__text">
-              <p>30 академических часов + 7-ми дневная дополнительная отработка на любом количестве моделей</p>
+              <p>
+                30 академических часов + 7-ми дневная дополнительная отработка на любом количестве
+                моделей
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-
-};
+}

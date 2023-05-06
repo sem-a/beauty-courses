@@ -27,6 +27,11 @@ export default function Teacher() {
                 в тренде и чувствовать новые веяния в сфере красоты
               </p>
             </div>
+            <div className="teacher__button">
+              <a href="#main" className="button">
+                Записаться
+              </a>
+            </div>
           </div>
           <div className="teacher__item">
             <div className="theory-and-teacher-photo">
